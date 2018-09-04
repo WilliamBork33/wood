@@ -1,12 +1,16 @@
 # wood
 Website and simple CRM system.
 
+Heroku Live Link: https://stark-forest-81115.herokuapp.com/
 
 npm install
-npm react
-create-react-app-wood
-npm yarn
-npm i react-router-dom
+`npm react`
+`create-react-app-wood`
+`npm yarn`
+`npm i react-router-dom`
+`npm install --save reactstrap react react-dom`
+`npm install bootstrap --save`
+
 
 # Final Project Requirements
 
