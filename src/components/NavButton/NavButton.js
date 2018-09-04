@@ -41,6 +41,16 @@ const NavButton = () => (
         Portfolio
       </Link>
     </button>
+    <button className="nav-item">
+      <Link
+        to="/admin"
+        className={
+          window.location.pathname === "/admin" ? "nav-link active" : "nav-link"
+        }
+      >
+        Admin
+      </Link>
+    </button>
     
   </div>
 );

@@ -7,6 +7,7 @@ import Header from './components/Header/';
 import Landing from './components/Landing/';
 import About from './components/About/';
 import Portfolio from './components/Portfolio/';
+import Admin from './components/Admin/';
 import Navigation from './components/Navigation/';
 import Form from './components/Form/';
 import SocialLinks from './components/SocialLinks/';
@@ -38,6 +39,7 @@ class App extends Component {
             <Route exact path="/" component={Landing} />
             <Route exact path="/about" component={About} />
             <Route exact path="/portfolio" component={Portfolio} />
+            <Route exact path="/admin" component={Admin} />
 
         </Wrapper>
         
