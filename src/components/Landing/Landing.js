@@ -1,20 +1,16 @@
 //Importing React Components
 import React from "react";
-import "./Landing.css";
-import NavButton from "../NavButton/";
-import { Button } from 'reactstrap';
 
+import NavButtons from "../NavButtons/";
+import "./Landing.css";
 
 //Instruction Div
 const Landing = props => (
     <div className="instructionsbox">
         <h1>Obbagy Contruction</h1>
         <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-
-       
     
-        <NavButton color="danger">Home</NavButton>
-        <Button color="danger">Home</Button>
+        <NavButtons />
     
         <h4>Contact Us:</h4>
         <h4>hunter@obbagyconstruction.com</h4>

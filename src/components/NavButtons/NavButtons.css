@@ -1,0 +1,13 @@
+.navbtn-home, .navbtn-about, .navbtn-portfolio, .navbtn-login {
+    width: 130px;
+    height: 40px;
+    background-color: whitesmoke;
+    border-style: auto;
+    border-color: black;
+    border-radius: 6px;
+    line-height: 2px;
+    align-content: center;
+    text-align: center;
+    color: black;
+    margin: 2px;
+}
