@@ -43,12 +43,12 @@ const NavButton = () => (
     </button>
     <button className="nav-item">
       <Link
-        to="/admin"
+        to="/login"
         className={
           window.location.pathname === "/admin" ? "nav-link active" : "nav-link"
         }
       >
-        Admin
+        Login
       </Link>
     </button>
     

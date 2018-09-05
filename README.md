@@ -10,7 +10,13 @@ npm install
 `npm i react-router-dom`
 `npm install --save reactstrap react react-dom`
 `npm install bootstrap --save`
-
+`npm install express`
+`npm install express-session`
+`npm install body-parser`
+`npm install morgan`
+`npm install mongoose`
+`npm install passport`
+`npm install passport-local`
 
 # Final Project Requirements
 
