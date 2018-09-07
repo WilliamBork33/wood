@@ -20,11 +20,10 @@ const About = props => (
         </div>
         
         <Container>
-        
             <Row>
                 <Col xs="6"><h3 id="h3-about">About Us</h3>
                     <div class="page-content">
-                        <img id="pika" src="./pika.jpg" alt="Hunter Obbagy" />
+                        <img id="pika" src="/pika.jpg" alt="Hunter Obbagy" />
                         <p>Hunter Obbagy
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Nulla ac sem est. Etiam mattis, massa quis tristique porttitor, nisl velit gravida mauris, ac egestas tellus nunc et odio.
@@ -34,7 +33,7 @@ const About = props => (
                             Aenean elementum risus nec tellus venenatis auctor.                 
                         </p>
                     </div>
-                    <p id="resume">- Hunter Obbagy: <a href="./assets/documents/William N. Aaron Bork - Technical Resume (08.09.18).pdf" target="_blank">Hunter Obbagy Resume (August 2018).pdf</a></p>
+                    <p id="resume">- Hunter Obbagy: <a href="About/William N. Aaron Bork - Technical Resume (08.09.18).pdf" target="_blank">Hunter Obbagy Resume (August 2018).pdf</a></p>
                 </Col>
                 
                 <Col xs="6"><h3 id="h3-about">Services</h3>
