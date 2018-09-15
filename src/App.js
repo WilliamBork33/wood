@@ -1,57 +1,49 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import logo from './logo.svg';
-import './App.css';
-import Wrapper from './components/Wrapper/';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import logo from "./logo.svg";
+import "./App.css";
+import Wrapper from "./components/Wrapper/";
 
-import Landing from './components/Landing/';
-import About from './components/About/';
-import Portfolio from './components/Portfolio/';
-import Login from './components/Login/';
-import Admin from './components/Admin/';
+import Landing from "../src/components/Pages/Landing";
+import About from "./components/Pages/About/";
+import Portfolio from "./components/Pages/Portfolio/";
+import Login from "./components/Pages/Login/";
+import Admin from "./components/Pages/Admin/";
+import Quote from "./components/Pages/Quote/";
+import Example from "./components/Example/";
 
-import Form from './components/Form/';
-import SocialLinks from './components/SocialLinks/';
-import Footer from './components/Footer/';
+import Form from "./components/Form/";
+import SocialLinks from "./components/SocialLinks/";
+import Footer from "./components/Footer/";
 import NavButtons from "./components/NavButtons/";
 import NavButton from "./components/NavButtons/";
 
-
-import { Button } from 'reactstrap';
-import { Container, Row, Col } from 'reactstrap';
-
+import { Button } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 
 class App extends Component {
   render() {
     return (
-        
-        <Wrapper>
-
+      <Wrapper>
         {/* <Landing/>        
         <About />
         <Portfolio /> */}
 
         <Router>
-        <Wrapper>
+          <Wrapper>
             <Route exact path="/" component={Landing} />
             <Route exact path="/about" component={About} />
             <Route exact path="/portfolio" component={Portfolio} />
+            <Route exact path="/quote" component={Quote} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/admin" component={Admin} />
-        </Wrapper>
+          </Wrapper>
         </Router>
 
         <Footer />
-
-    
-        
-        </Wrapper>
-     
-        
+      </Wrapper>
     );
   }
 }
-
-
 
 export default App;

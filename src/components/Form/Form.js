@@ -30,8 +30,9 @@ class Form extends Component {
       alert("Fill out your first and last name please!");
     } else if (this.state.password.length < 6) {
       alert(
-        `Choose a more secure password ${this.state.firstName} ${this.state
-          .lastName}`
+        `Choose a more secure password ${this.state.firstName} ${
+          this.state.lastName
+        }`
       );
     } else {
       alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
