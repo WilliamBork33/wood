@@ -47,3 +47,9 @@ class App extends Component {
 }
 
 export default App;
+
+////////////////////////////////
+//TODO
+// Get that local storage to load in table
+// Get that same data to save in a database
+///////////////////////////////

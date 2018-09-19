@@ -11,52 +11,109 @@ import NavButtons from "../../NavButtons/";
 class Quote extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: "", value: "" };
-    this.state = { value: "", value: "" };
+    this.state = { value: "" };
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    //this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
     this.setState({ value: event.target.value });
-  }
+    //console.log(this.state.value);
+    let quoteInput = this.state.value;
+    //console.log(quoteInput);
 
+    //Declare const globally and assign it to the Clear Tasks button
+    const quoteSubmitButton = document.getElementById("quote-submit");
+
+    quoteSubmitButton.addEventListener("click", eventHandler);
+
+    function eventHandler(e) {
+      //console.log("Quote Submitted");
+      //alert("Quote");
+
+      saveDataLocally();
+    }
+
+    //Declare Arrays Globally for Local Storage
+    let newTaskArray = [];
+    let parsedArray = [];
+
+    let newTask;
+    let taskInput;
+    let stringyObject;
+
+    function saveDataLocally() {
+      //Declare variable and assign it what is typed in the form)
+      newTask = `${quoteInput}`;
+      console.log("JSON Task:", newTask);
+
+      //Change newTask JSON to a string
+      stringyObject = JSON.stringify(newTask);
+      console.log("stringyObject Task:", stringyObject);
+      localStorage.setItem("stringyObject Array:", stringyObject);
+
+      ///NEXT GET LOCAL STORAGE TO LOAD IN TABLE.JS tables
+
+      //Push latest input from form into array
+      //newTaskArray.push(`${quoteInput}`);
+      //console.log("JSON Array:", newTaskArray);
+
+      //Change JSON array to a string
+      //stringyObject = JSON.stringify(newTaskArray);
+      //Set stringyObject to save in local storage
+      //localStorage.setItem("stringyObject Array:", stringyObject);
+      //console.log("stringyObject Array:", stringyObject);
+
+      //Parse stringyObject back to a JSON
+      //parsedArray = JSON.parse(localStorage.getItem("stringyObject Array:"));
+      //localStorage.setItem("Parsed Array:", parsedArray);
+      //console.log("Parsed Array:", parsedArray);
+    }
+    /* 
   handleSubmit(event) {
     console.log("A name was submitted: " + this.state.value);
     let theValue = this.state.value;
+    console.log(theValue);
+    console.log("hS");
     event.preventDefault();
-
+ */
+    ////////////////////////////
+    //SAVE TO LOCAL STORAGE (RAN INSIDE runEvent FUNCTION)
+    //Displays data in JSONs, Strings, and Arrays in developer console / application
+    ////////////////////////////
+    /* 
+    //Declare Arrays Globally for Local Storage
     let newTaskArray = [];
     let parsedArray = [];
 
     function saveDataLocally() {
       //Declare variable and assign it what is typed in the form)
-      let newTask = `${theValue}`;
-      //Set newTask JSON to save in local storage
-      sessionStorage.setItem("JSON Task:", newTask);
+      newTask = `${taskInput.value}`;
+      console.log("JSON Task:", newTask);
 
       //Change newTask JSON to a string
-      let stringyObject = JSON.stringify(newTask);
-      //Set stringyObject to save in local storage
-      sessionStorage.setItem("stringyObject Task:", stringyObject);
+      stringyObject = JSON.stringify(newTask);
+      console.log("stringyObject Task:", stringyObject);
 
       //Push latest input from form into array
-      newTaskArray.push(`${theValue}`);
-      //Set newTaskArray JSON to save in local storage
-      sessionStorage.setItem("JSON Array:", newTaskArray);
+      newTaskArray.push(`${taskInput.value}`);
+      console.log("JSON Array:", newTaskArray);
 
       //Change JSON array to a string
       stringyObject = JSON.stringify(newTaskArray);
       //Set stringyObject to save in local storage
-      sessionStorage.setItem("stringyObject Array:", stringyObject);
+      localStorage.setItem("stringyObject Array:", stringyObject);
+      console.log("stringyObject Array:", stringyObject);
 
       //Parse stringyObject back to a JSON
-      parsedArray = JSON.parse(sessionStorage.getItem("stringyObject Array:"));
-      sessionStorage.setItem("Parsed Array:", parsedArray);
-    }
+      parsedArray = JSON.parse(localStorage.getItem("stringyObject Array:"));
+      localStorage.setItem("Parsed Array:", parsedArray);
+      console.log("Parsed Array:", parsedArray);
 
-    saveDataLocally();
+      //Function to save new tasks into local storage
+      saveDataLocally();
+    } */
   }
 
   render() {
@@ -121,7 +178,8 @@ class Quote extends React.Component {
                 onChange={this.handleChange}
               />
             </label>
-            <input type="submit" value="Submit" />
+
+            <input type="submit" id="quote-submit" value="Submit" />
           </form>
 
           {/*  <Form>

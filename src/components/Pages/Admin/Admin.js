@@ -3,7 +3,7 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import "./Admin.css";
 import NavButtons from "../../NavButtons/";
-import DataTable from "../../Table/";
+import DataTable from "../../DataTable/";
 
 class Admin extends React.Component {
   render() {
