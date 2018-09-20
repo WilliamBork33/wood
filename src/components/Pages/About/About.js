@@ -1,6 +1,10 @@
+////////////////////
+// PAGE FOR INFO ABOUT OWNER
+////////////////////
+
 //Importing React Components
 import React from "react";
-import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import "./About.css";
 import NavButtons from "../../NavButtons/";
 
@@ -49,7 +53,7 @@ class About extends React.Component {
 
             <Col xs="6">
               <h3 id="h3-about">Services</h3>
-              <div id="accordion" id="accordion">
+              <div id="accordion">
                 <div class="card-accordion">
                   <div class="card-header" id="headingOne">
                     <h5 class="mb-0">

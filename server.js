@@ -1,33 +1,17 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var app = express();
-var morgan = require('morgan');
-var mongoose = require('mongoose');
-/* var flash = require('connect-flash'); */
-var cookieParser = require('cookie-parser');
-var session = require('express-session');
-var passport = require('passport');
+////////////////////
+// PUTTING FIREBASE DB HERE
+////////////////////
 
-var config = require('./config/database');
-var port = process.env.PORT || 5000;
-mongoose.connect(config.db,{
-    useMongoClient : true
-});
+<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js" />;
 
-require('./config/passport')(passport);
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(cookieParser());
-app.use(morgan('dev'));
-app.use(session({
-    secret:'secret123',
-    saveUninitialized: true,
-    resave:true
-}));
-app.use(passport.initialize());
-app.use(passport.session());
-/* app.use(flash()); */
-require('./routes/routes')(app, passport);
-
-app.listen(port);
-
+// Initialize Firebase
+// TODO: Replace with your project's customized code snippet
+var config = {
+  apiKey: "<API_KEY>",
+  authDomain: "<PROJECT_ID>.firebaseapp.com",
+  databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
+  projectId: "<PROJECT_ID>",
+  storageBucket: "<BUCKET>.appspot.com",
+  messagingSenderId: "<SENDER_ID>"
+};
+firebase.initializeApp(config);

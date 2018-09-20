@@ -1,10 +1,14 @@
+////////////////////
+// LOGIN PAGE FOR OWNER TO ENTER THEIR DASHBOARD
+////////////////////
+
 //Importing React Components
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
+import { Container, Col } from "reactstrap";
+import { Form, FormGroup, Label, Input } from "reactstrap";
 /* import { Link } from "react-router-dom"; */
 import "./Login.css";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Route, Link } from "react-router-dom";
 import Admin from "../Admin";
 import NavButtons from "../../NavButtons/";
 

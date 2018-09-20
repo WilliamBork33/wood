@@ -1,3 +1,7 @@
+////////////////////
+// FOOTER COMPONENT
+////////////////////
+
 //Importing React Components
 import React from "react";
 import "./Footer.css";
@@ -8,11 +12,19 @@ class Footer extends React.Component {
       <div className="footer">
         <p>
           Creator:{" "}
-          <a href="http://www.williambork.com/" target="_blank">
+          <a
+            href="http://www.williambork.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             williambork.com
           </a>{" "}
           |{" "}
-          <a href="https://github.com/WilliamBork33" target="_blank">
+          <a
+            href="https://github.com/WilliamBork33"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             GitHub
           </a>{" "}
           |{" "}

@@ -1,3 +1,7 @@
+////////////////////
+// LANDING PAGE FOR SITE VISITORS
+////////////////////
+
 //Importing React Components
 import React from "react";
 

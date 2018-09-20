@@ -1,6 +1,10 @@
+////////////////////
+// MAIN REACT APP FILE
+////////////////////
+
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import logo from "./logo.svg";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
 import "./App.css";
 import Wrapper from "./components/Wrapper/";
 
@@ -10,16 +14,11 @@ import Portfolio from "./components/Pages/Portfolio/";
 import Login from "./components/Pages/Login/";
 import Admin from "./components/Pages/Admin/";
 import Quote from "./components/Pages/Quote/";
-import Example from "./components/Example/";
-
-import Form from "./components/Form/";
 import SocialLinks from "./components/SocialLinks/";
 import Footer from "./components/Footer/";
-import NavButtons from "./components/NavButtons/";
-import NavButton from "./components/NavButtons/";
-
-import { Button } from "reactstrap";
-import { Container, Row, Col } from "reactstrap";
+//import Example from "./components/Example/";
+//import Test from "./components/Pages/Test/";
+//import NavButtons from "./components/NavButtons/";
 
 class App extends Component {
   render() {
@@ -37,6 +36,7 @@ class App extends Component {
             <Route exact path="/quote" component={Quote} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/admin" component={Admin} />
+            {/*  <Route exact path="/test" component={Test} /> */}
           </Wrapper>
         </Router>
 
@@ -47,9 +47,3 @@ class App extends Component {
 }
 
 export default App;
-
-////////////////////////////////
-//TODO
-// Get that local storage to load in table
-// Get that same data to save in a database
-///////////////////////////////

@@ -1,3 +1,7 @@
+////////////////////
+// NAVIGATION COMPONENT
+////////////////////
+
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NavButtons.css";
@@ -50,6 +54,19 @@ class NavButtons extends React.Component {
             }
           >
             Get Quote
+          </Link>
+        </button>
+
+        <button className="navbtn-portfolio">
+          <Link
+            to="/test"
+            className={
+              window.location.pathname === "/test"
+                ? "nav-link active"
+                : "nav-link"
+            }
+          >
+            TEST
           </Link>
         </button>
       </div>

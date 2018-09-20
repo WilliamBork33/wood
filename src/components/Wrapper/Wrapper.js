@@ -1,3 +1,7 @@
+////////////////////
+// WRAPPER COMPONENT
+////////////////////
+
 //Importing React Components
 import React from "react";
 import "./Wrapper.css";

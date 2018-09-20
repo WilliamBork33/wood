@@ -1,3 +1,7 @@
+////////////////////
+// COMPONENT FOR SHOWING SOCIAL MEDIA ICONS & LINKS
+////////////////////
+
 //Importing React Components
 import React from "react";
 import "./SocialLinks.css";
@@ -10,6 +14,7 @@ class SocialLinks extends React.Component {
           <a
             href="https://twitter.com/williambork"
             target="_blank"
+            rel="noopener noreferrer"
             class="icon-twitter"
           >
             <i class="fab fa-twitter" />
@@ -17,6 +22,7 @@ class SocialLinks extends React.Component {
           <a
             href="https://github.com/WilliamBork33"
             target="_blank"
+            rel="noopener noreferrer"
             class="icon-github"
           >
             <i class="fab fa-github" />
@@ -24,6 +30,7 @@ class SocialLinks extends React.Component {
           <a
             href="https://www.youtube.com/user/WilliamNAaronBork/videos"
             target="_blank"
+            rel="noopener noreferrer"
             class="icon-youtube"
           >
             <i class="fab fa-youtube" />
@@ -31,6 +38,7 @@ class SocialLinks extends React.Component {
           <a
             href="https://www.linkedin.com/in/william-n-aaron-bork-aa865152/"
             target="_blank"
+            rel="noopener noreferrer"
             class="icon-linkedin"
           >
             <i class="fab fa-linkedin" />

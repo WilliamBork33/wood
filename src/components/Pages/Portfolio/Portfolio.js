@@ -1,3 +1,7 @@
+////////////////////
+// PAGE TO DISPLAY RECENT WORK
+////////////////////
+
 //Importing React Components
 import React from "react";
 import {

@@ -1,10 +1,15 @@
+////////////////////
+// A TABLE COMPONENT TO SHOW CLIENT INFO INSIDE USER ADMIN PAGE
+////////////////////
+
 import React from "react";
 import { Table } from "reactstrap";
 import "./DataTable.css";
-///TRYING TO GET A CONSOLE.LOG TO SHOW THIS WORKS SO I CAN READ SESSION STORAGE AND POPULATE TABLE WITH ENTERED DATA
 class DataTable extends React.Component {
   constructor(props) {
     super(props);
+
+    console.log("jj");
   }
 
   render() {

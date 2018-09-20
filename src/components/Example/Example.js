@@ -1,3 +1,7 @@
+////////////////////
+// JUST A COMPONENT FOR TESTING
+////////////////////
+
 import React from "react";
 import { Table, Button } from "reactstrap";
 import "./Example.css";

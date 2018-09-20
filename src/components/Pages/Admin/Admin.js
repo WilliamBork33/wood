@@ -1,3 +1,7 @@
+////////////////////
+// DASHBOARD FOR OWNER TO VIEW CLIENTS
+////////////////////
+
 //Importing React Components
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
