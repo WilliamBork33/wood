@@ -4,19 +4,50 @@
 
 //Importing React Components
 import React from "react";
-import { Container, Col } from "reactstrap";
+import { Container, Col, Button } from "reactstrap";
 import { Form, FormGroup, Label, Input } from "reactstrap";
+import * as firebase from "firebase";
 /* import { Link } from "react-router-dom"; */
 import "./Quote.css";
 
 import NavButtons from "../../NavButtons/";
 
+const config = {
+  apiKey: "AIzaSyB4B_u9EWpMHxUr_18D6y_TFnc9j2o41mo",
+  authDomain: "wood-934f4.firebaseapp.com",
+  databaseURL: "https://wood-934f4.firebaseio.com",
+  projectId: "wood-934f4",
+  storageBucket: "wood-934f4.appspot.com",
+  messagingSenderId: "430419689265"
+};
+firebase.initializeApp(config);
+
 class Quote extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: "" };
+
+    this.state = { name: "", email: "", phone: "", task: "" };
     this.handleChange = this.handleChange.bind(this);
   }
+
+  saveFirebase() {
+    //let quoteInput = this.state.value;
+
+    var database = firebase.database();
+
+    database.ref("quotes/").push(this.state);
+
+    this.setState({ name: "", email: "", phone: "", task: "" });
+  }
+
+  handleInputChange = event => {
+    // Getting the value and name of the input which triggered the change
+    const { name, value } = event.target;
+    // Updating the input's state
+    this.setState({
+      [name]: value
+    });
+  };
 
   handleChange(event) {
     this.setState({ value: event.target.value });
@@ -30,55 +61,7 @@ class Quote extends React.Component {
     quoteSubmitButton.addEventListener("click", eventHandler);
 
     //Saves data in local storage for testing purposes
-    function eventHandler(e) {
-      saveDataLocally();
-      saveToMongoDB();
-    }
-
-    ////////////////////////
-
-    function saveToMongoDB() {
-      /*  db.clients.insertOne({
-        name: "kitty",
-        email: "y@yahoo.com",
-        phone: "44",
-        task: "stuff"
-      }); */
-    }
-
-    function saveDataLocally() {
-      //Declare Arrays Globally for Local Storage
-      let newTaskArray = [];
-      let parsedArray = [];
-
-      let newTask;
-      let taskInput;
-      let stringyObject;
-
-      //Declare variable and assign it what is typed in the form)
-      newTask = `${quoteInput}`;
-      console.log("JSON Task:", newTask);
-
-      //Change newTask JSON to a string
-      stringyObject = JSON.stringify(newTask);
-      console.log("stringyObject Task:", stringyObject);
-      localStorage.setItem("stringyObject Array:", stringyObject);
-
-      //Push latest input from form into array
-      //newTaskArray.push(`${quoteInput}`);
-      //console.log("JSON Array:", newTaskArray);
-
-      //Change JSON array to a string
-      //stringyObject = JSON.stringify(newTaskArray);
-      //Set stringyObject to save in local storage
-      //localStorage.setItem("stringyObject Array:", stringyObject);
-      //console.log("stringyObject Array:", stringyObject);
-
-      //Parse stringyObject back to a JSON
-      //parsedArray = JSON.parse(localStorage.getItem("stringyObject Array:"));
-      //localStorage.setItem("Parsed Array:", parsedArray);
-      //console.log("Parsed Array:", parsedArray);
-    }
+    function eventHandler(e) {}
   }
 
   render() {
@@ -100,53 +83,51 @@ class Quote extends React.Component {
               <Label for="name" />
               <Input
                 type="text"
-                value={this.state.value}
-                onChange={this.handleChange}
+                value={this.state.name}
+                onChange={this.handleInputChange}
                 name="name"
                 id="name"
                 placeholder="Name"
               />
             </FormGroup>
-
             <FormGroup>
               <Label for="email" />
               <Input
                 type="text"
-                value={this.state.value}
-                onChange={this.handleChange}
+                value={this.state.email}
+                onChange={this.handleInputChange}
                 name="email"
                 id="email"
                 placeholder="Email"
               />
             </FormGroup>
-
             <FormGroup>
               <Label for="phone" />
               <Input
                 type="text"
-                value={this.state.value}
-                onChange={this.handleChange}
+                value={this.state.phone}
+                onChange={this.handleInputChange}
                 name="phone"
                 id="phone"
                 placeholder="Phone"
               />
             </FormGroup>
-
             <FormGroup>
               <Label for="task" />
               <Input
                 type="text"
-                value={this.state.value}
-                onChange={this.handleChange}
+                value={this.state.task}
+                onChange={this.handleInputChange}
                 name="task"
                 id="task"
                 placeholder="What can Obbagy Construction do for you?"
               />
             </FormGroup>
-
             <br />
 
-            <input type="submit" id="quote-submit" value="Submit" />
+            <Button onClick={() => this.saveFirebase()} color="primary">
+              primary
+            </Button>
           </Form>
         </Container>
 

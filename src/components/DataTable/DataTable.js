@@ -8,8 +8,6 @@ import "./DataTable.css";
 class DataTable extends React.Component {
   constructor(props) {
     super(props);
-
-    console.log("jj");
   }
 
   render() {

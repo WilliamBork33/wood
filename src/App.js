@@ -16,6 +16,7 @@ import Admin from "./components/Pages/Admin/";
 import Quote from "./components/Pages/Quote/";
 import SocialLinks from "./components/SocialLinks/";
 import Footer from "./components/Footer/";
+
 //import Example from "./components/Example/";
 //import Test from "./components/Pages/Test/";
 //import NavButtons from "./components/NavButtons/";
