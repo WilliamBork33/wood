@@ -12,47 +12,7 @@ class DataTable extends React.Component {
     super(props);
   }
 
-  readFirebase() {
-    var ref = firebase.database().ref();
-
-    // Retrieve new posts as they are added to our database
-    ref.on(
-      "value",
-      function(snapshot) {
-        console.log(snapshot.val());
-        //var newPost = snapshot.val();
-        //console.log("Author: " + newPost.author);
-        //console.log("Title: " + newPost.title);
-        //console.log("Previous Post ID: " + prevChildKey);
-      },
-      function(error) {
-        console.log("Error");
-      }
-    );
-  }
-
-  /* read() {
-    let parsedArray = [];
-    //Function to read session storage and build task list from that
-    function readStorage() {
-      let parsedArray = JSON.parse(
-        localStorage.getItem("stringyObject Array:")
-      );
-      //Check if parsedArray is empty
-      if (parsedArray == null) {
-        console.log("Nothing here...");
-      } else {
-        console.log(parsedArray);
-        //return parsedArray;
-      }
-    }
-    var x = parsedArray;
-  } */
-
   render() {
-    //Run Function
-    //readStorage();
-
     return (
       <Table>
         <thead className="Table">

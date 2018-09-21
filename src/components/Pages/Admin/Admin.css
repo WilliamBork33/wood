@@ -79,14 +79,21 @@ ul {
 }
 
 td {
-  width: 400px;
   border: white;
   border-style: dashed;
   text-align: center;
 }
 
 tr {
-  border: purple;
+  border: black;
   border-style: solid;
   text-align: center;
 }
+
+#clients-table {
+}
+/* 
+#table-template {
+  background-color: purple;
+}
+ */

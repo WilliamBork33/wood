@@ -46,9 +46,10 @@ class Admin extends React.Component {
       function addOutput() {
         const list = document.getElementById("table-template");
         const row = document.createElement("tr");
+        //const column = document.createElement("rw");
 
         row.innerHTML = `
-        <td>${""}</td> <td>${outputName}</td> <td>${outputEmail}</td> <td>${outputPhone}</td> <td>${outputTask}</td></td>
+        <td>${outputName}</td> <td>${outputEmail}</td> <td>${outputPhone}</td> <td>${outputTask}</td></td>
         <td><a href="#" class="delete">X</a></td>`;
 
         list.appendChild(row);
@@ -68,7 +69,7 @@ class Admin extends React.Component {
       <div className="adminpage">
         <div className="adminheader">
           <Col>
-            <h1 id="h1-login">Obbagy Contruction</h1>
+            <h1 id="h1-login">Obbagy Construction</h1>
             <h2 id="h2-login">Admin Dashboard</h2>
           </Col>
 
@@ -85,7 +86,6 @@ class Admin extends React.Component {
               <Table>
                 <thead className="Table" id="table-template">
                   <tr>
-                    <th />
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone</th>
@@ -95,7 +95,6 @@ class Admin extends React.Component {
                 </thead>
                 <tbody className="Table">
                   <tr>
-                    <th scope="row" />
                     <td>{}</td>
                     <td>{}</td>
                     <td>{}</td>
@@ -106,24 +105,12 @@ class Admin extends React.Component {
               </Table>
 
               <ul class="clients-table" id="clients-table" />
-
-              {/*   <DataTable /> */}
             </Col>
-            {/*}
-            <Col xs="4">
-              <h3 id="h3-about">In-Progress</h3>
-            </Col>
-            <Col xs="4">
-              <h3 id="h3-about">Completed Projects</h3>
-            </Col>
-            */}
           </Row>
           <Col xs="12">
             <h3 id="h3-about">In-Progress</h3>
-
             <ul class="clients-table" id="clients-table" />
-
-            {/*   <DataTable /> */}
+            {/*  <DataTable /> */}
           </Col>
           <Row />
         </Container>
