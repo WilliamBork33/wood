@@ -5,12 +5,33 @@
 import React from "react";
 import { Table } from "reactstrap";
 import "./DataTable.css";
+import * as firebase from "firebase";
+
 class DataTable extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  render() {
+  readFirebase() {
+    var ref = firebase.database().ref();
+
+    // Retrieve new posts as they are added to our database
+    ref.on(
+      "value",
+      function(snapshot) {
+        console.log(snapshot.val());
+        //var newPost = snapshot.val();
+        //console.log("Author: " + newPost.author);
+        //console.log("Title: " + newPost.title);
+        //console.log("Previous Post ID: " + prevChildKey);
+      },
+      function(error) {
+        console.log("Error");
+      }
+    );
+  }
+
+  /* read() {
     let parsedArray = [];
     //Function to read session storage and build task list from that
     function readStorage() {
@@ -26,9 +47,11 @@ class DataTable extends React.Component {
       }
     }
     var x = parsedArray;
+  } */
 
+  render() {
     //Run Function
-    readStorage();
+    //readStorage();
 
     return (
       <Table>
@@ -44,7 +67,7 @@ class DataTable extends React.Component {
         <tbody className="Table">
           <tr>
             <th scope="row">1</th>
-            <td>{x}</td>
+            <td>{}</td>
             <td>{}</td>
             <td>{}</td>
             <td>{}</td>
