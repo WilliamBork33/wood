@@ -26,7 +26,7 @@ class Portfolio extends React.Component {
       <div className="portfoliopage">
         <div className="portfolioheader">
           <Col>
-            <h1 id="h1-portfolio">Obbagy Contruction</h1>
+            <h1 id="h1-portfolio">Obbagy Construction</h1>
             <h2 id="h2-portfolio">Portfolio</h2>
           </Col>
 

@@ -69,7 +69,7 @@ class Quote extends React.Component {
       <div className="quotepage">
         <div className="quoteheader">
           <Col>
-            <h1 id="h1-quote">Obbagy Contruction</h1>
+            <h1 id="h1-quote">Obbagy Construction</h1>
             <h2 id="h2-quote">Get a Quote</h2>
           </Col>
           <NavButtons />

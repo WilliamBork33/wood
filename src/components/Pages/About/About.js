@@ -14,7 +14,7 @@ class About extends React.Component {
       <div className="aboutpage">
         <div className="aboutheader">
           <Col>
-            <h1 id="h1-about">Obbagy Contruction</h1>
+            <h1 id="h1-about">Obbagy Construction</h1>
             <h2 id="h2-about">About Us</h2>
           </Col>
 
@@ -68,7 +68,7 @@ class About extends React.Component {
                         aria-expanded="false"
                         aria-controls="collapseOne"
                       >
-                        Wood Stuff
+                        Custom Cabinets
                       </button>
                     </h5>
                   </div>
@@ -93,7 +93,7 @@ class About extends React.Component {
                         aria-expanded="false"
                         aria-controls="collapseTwo"
                       >
-                        Wood Stuff
+                        Custom Floor & Wall Trim
                       </button>
                     </h5>
                   </div>
@@ -118,7 +118,7 @@ class About extends React.Component {
                         aria-expanded="false"
                         aria-controls="collapseThree"
                       >
-                        Wood Stuff
+                        Staircases
                       </button>
                     </h5>
                   </div>
@@ -143,7 +143,7 @@ class About extends React.Component {
                         aria-expanded="false"
                         aria-controls="collapseFour"
                       >
-                        Wood Stuff
+                        Restoration
                       </button>
                     </h5>
                   </div>

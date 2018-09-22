@@ -18,7 +18,7 @@ class Login extends React.Component {
       <div className="aboutpage">
         <div className="loginheader">
           <Col>
-            <h1 id="h1-login">Obbagy Contruction</h1>
+            <h1 id="h1-login">Obbagy Construction</h1>
             <h2 id="h2-login">About Us</h2>
           </Col>
 
