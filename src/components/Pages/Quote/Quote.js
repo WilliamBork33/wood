@@ -61,7 +61,9 @@ class Quote extends React.Component {
     quoteSubmitButton.addEventListener("click", eventHandler);
 
     //Saves data in local storage for testing purposes
-    function eventHandler(e) {}
+    function eventHandler(e) {
+      alert("Submitted. Hunter will contact you shortly.");
+    }
   }
 
   render() {
@@ -126,7 +128,7 @@ class Quote extends React.Component {
             <br />
 
             <Button onClick={() => this.saveFirebase()} color="primary">
-              primary
+              Get a Quote
             </Button>
           </Form>
         </Container>
