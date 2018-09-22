@@ -37,7 +37,6 @@ class App extends Component {
             <Route exact path="/quote" component={Quote} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/admin" component={Admin} />
-            {/*  <Route exact path="/test" component={Test} /> */}
           </Wrapper>
         </Router>
 

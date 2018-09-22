@@ -8,6 +8,7 @@ import { Container, Row, Col, Table } from "reactstrap";
 import "./Admin.css";
 import NavButtons from "../../NavButtons/";
 import DataTable from "../../DataTable/";
+//import Example from "../../Example";
 import * as firebase from "firebase";
 
 class Admin extends React.Component {
@@ -16,27 +17,8 @@ class Admin extends React.Component {
 
     clientDBRef.on("child_added", function(data, prevChildKey) {
       var clients = data.val();
-      //console.log(clients);
-      //console.log("name: " + clients.name);
-      //console.log("email: " + clients.email);
-      //console.log("phone: " + clients.phone);
-      //console.log("task:" + prevChildKey);
 
-      //console.log(clients);
-      //var i;
-
-      //for (i = 0; i < clients.value.length; i++) {
-      //console.log(parsedJoke.value[i]);
-
-      // Declare let and assign it value of the joke text
-      //let joke = clients; parsedJoke.value[i].joke;
-      console.log(clients);
-      console.log("name: " + clients.name);
-      console.log("email: " + clients.email);
-      console.log("phone: " + clients.phone);
-      console.log("task:" + prevChildKey);
-
-      // Declare let and assign it value of "joke"
+      let listNumber = 1;
       let outputName = clients.name;
       let outputEmail = clients.email;
       let outputPhone = clients.phone;
@@ -46,11 +28,10 @@ class Admin extends React.Component {
       function addOutput() {
         const list = document.getElementById("table-template");
         const row = document.createElement("tr");
-        //const column = document.createElement("rw");
 
         row.innerHTML = `
-        <td>${outputName}</td> <td>${outputEmail}</td> <td>${outputPhone}</td> <td>${outputTask}</td></td>
-        <td><a href="#" class="delete">X</a></td>`;
+        <td>${listNumber}</td> <td>${outputName}</td> <td>${outputEmail}</td> <td>${outputPhone}</td> <td>${outputTask}</td></td>
+      <td><a href="#" class="move" id="move"><></a></td><td><a href="#" class="delete" id="delete">X</a></td>`;
 
         list.appendChild(row);
       }
@@ -58,11 +39,25 @@ class Admin extends React.Component {
       // Run Function
       addOutput();
     });
+
+    ////////////////////////////////////////
+    // DELETE
+    ////////////////////////////////////////
+    function deleteFirebase() {
+      var clientDBRef = firebase.database().ref("quotes/");
+      clientDBRef.child("quotes/").remove();
+      console.log("ddddddddddddddddd");
+    }
+    deleteFirebase();
   }
 
   componentDidMount() {
     this.readFirebase();
   }
+
+  ////////////////////////////////////////
+  //
+  ////////////////////////////////////////
 
   render() {
     return (
@@ -81,36 +76,59 @@ class Admin extends React.Component {
         <Container>
           <Row>
             <Col xs="12">
-              <h3 id="h3-about">New Customers</h3>
+              <h3 id="h3-about">New Clients</h3>
 
               <Table>
                 <thead className="Table" id="table-template">
                   <tr>
+                    <th>#</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone</th>
                     <th>Task</th>
                     <th>Action</th>
+                    <th>Delete</th>
                   </tr>
                 </thead>
-                <tbody className="Table">
-                  <tr>
-                    <td>{}</td>
-                    <td>{}</td>
-                    <td>{}</td>
-                    <td>{}</td>
-                    <td>{}</td>
-                  </tr>
-                </tbody>
+                <tbody class="clients-table" id="clients-table" />
               </Table>
-
-              <ul class="clients-table" id="clients-table" />
             </Col>
           </Row>
           <Col xs="12">
             <h3 id="h3-about">In-Progress</h3>
-            <ul class="clients-table" id="clients-table" />
+            <Table>
+              <thead className="Table" id="table-template">
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Task</th>
+                  <th>Action</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody class="clients-table" id="clients-table" />
+            </Table>
             {/*  <DataTable /> */}
+          </Col>
+
+          <Col xs="12">
+            <h3 id="h3-about">Completed</h3>
+            <Table>
+              <thead className="Table" id="table-template">
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Task</th>
+                  <th>Action</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody class="clients-table" id="clients-table" />
+            </Table>
           </Col>
           <Row />
         </Container>

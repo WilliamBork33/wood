@@ -45,16 +45,18 @@ class Portfolio extends React.Component {
                 <CardImg
                   top
                   width="100%"
-                  src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
+                  src="http://2.bp.blogspot.com/-4ijCTB1mX1I/UwzHg4CmKUI/AAAAAAAABm8/C5VtnhHdmFQ/s1600/Wooden-Stairs-Design-details.jpg"
                   alt="Card image cap"
                 />
                 <CardBody>
-                  <CardTitle>Card title</CardTitle>
-                  <CardSubtitle>Card subtitle</CardSubtitle>
+                  <CardTitle>Sed Expedita</CardTitle>
+                  <CardSubtitle>Dignissimos</CardSubtitle>
                   <CardText>
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Dignissimos enim dolor iusto magnam rem laborum
+                    exercitationem recusandae dolores debitis architecto ratione
+                    quis vero officiis excepturi, sed expedita veniam beatae
+                    quam.
                   </CardText>
                   <Button>Button</Button>
                 </CardBody>
@@ -63,15 +65,19 @@ class Portfolio extends React.Component {
                 <CardImg
                   top
                   width="100%"
-                  src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
+                  src="https://www.alliancewoodworking.com/wp-content/uploads/2013/12/Baseboard-9.jpg"
                   alt="Card image cap"
                 />
                 <CardBody>
-                  <CardTitle>Card title</CardTitle>
-                  <CardSubtitle>Card subtitle</CardSubtitle>
+                  <CardTitle>Sit Amet</CardTitle>
+                  <CardSubtitle>Vero Officiis</CardSubtitle>
+                  <br />
                   <CardText>
-                    This card has supporting text below as a natural lead-in to
-                    additional content.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Dignissimos enim dolor iusto magnam rem laborum
+                    exercitationem recusandae dolores debitis architecto ratione
+                    quis vero officiis excepturi, sed expedita veniam beatae
+                    quam.
                   </CardText>
                   <Button>Button</Button>
                 </CardBody>
@@ -80,16 +86,19 @@ class Portfolio extends React.Component {
                 <CardImg
                   top
                   width="100%"
-                  src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
+                  src="http://1.bp.blogspot.com/-6XTCJ_Db6jA/VrIcgOEkHrI/AAAAAAAAAFw/AEHNwDj6b4U/s1600/wooden%2Bstorage%2Bcabinets%2Bwith%2Bdoors%2Band%2Bshelves.jpg"
                   alt="Card image cap"
                 />
                 <CardBody>
-                  <CardTitle>Card title</CardTitle>
-                  <CardSubtitle>Card subtitle</CardSubtitle>
+                  <CardTitle>Dolor Iusto</CardTitle>
+                  <CardSubtitle>Iusto magnam rem</CardSubtitle>
+                  <br />
                   <CardText>
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This card has even longer
-                    content than the first to show that equal height action.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Dignissimos enim dolor iusto magnam rem laborum
+                    exercitationem recusandae dolores debitis architecto ratione
+                    quis vero officiis excepturi, sed expedita veniam beatae
+                    quam.
                   </CardText>
                   <Button>Button</Button>
                 </CardBody>

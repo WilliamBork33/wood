@@ -28,7 +28,11 @@ class About extends React.Component {
             <Col xs="6">
               <h3 id="h3-about">About Us</h3>
               <div class="page-content">
-                <img id="pika" src="/pika.jpg" alt="Hunter Obbagy" />
+                <img
+                  id="pika"
+                  src="https://i.pinimg.com/564x/cd/1b/12/cd1b12a36b861c2a8dfe625bd0ce62ae.jpg"
+                  alt="Hunter Obbagy"
+                />
                 <p>
                   Hunter Obbagy Lorem ipsum dolor sit amet, consectetur
                   adipiscing elit. Nulla ac sem est. Etiam mattis, massa quis
