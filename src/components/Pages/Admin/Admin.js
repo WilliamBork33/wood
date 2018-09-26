@@ -31,7 +31,7 @@ class Admin extends React.Component {
 
         row.innerHTML = `
         <td>${listNumber}</td> <td>${outputName}</td> <td>${outputEmail}</td> <td>${outputPhone}</td> <td>${outputTask}</td></td>
-      <td><a href="#" class="move" id="move"><></a></td><td><a href="#" class="delete" id="delete">X</a></td>`;
+      <td><a href="#" class="move" id="move"><></a></td> <td><button className="delete" id="delete">Delete</button></td`;
 
         list.appendChild(row);
       }
@@ -41,15 +41,18 @@ class Admin extends React.Component {
     });
 
     ////////////////////////////////////////
-    // DELETE
+    // DELETE ONE
     ////////////////////////////////////////
-    function deleteFirebase() {
+    function deleteOneFirebase() {
       var clientDBRef = firebase.database().ref("quotes/");
       clientDBRef.child("quotes/").remove();
       console.log("ddddddddddddddddd");
     }
-    deleteFirebase();
+    deleteOneFirebase();
   }
+  ////////////////////////////////////////
+  // DELETE ONE
+  ////////////////////////////////////////
 
   componentDidMount() {
     this.readFirebase();
@@ -90,7 +93,7 @@ class Admin extends React.Component {
                     <th>Delete</th>
                   </tr>
                 </thead>
-                <tbody class="clients-table" id="clients-table" />
+                <tbody className="clients-table" id="clients-table" />
               </Table>
             </Col>
           </Row>
@@ -108,7 +111,7 @@ class Admin extends React.Component {
                   <th>Delete</th>
                 </tr>
               </thead>
-              <tbody class="clients-table" id="clients-table" />
+              <tbody className="clients-table" id="clients-table" />
             </Table>
             {/*  <DataTable /> */}
           </Col>
@@ -127,7 +130,7 @@ class Admin extends React.Component {
                   <th>Delete</th>
                 </tr>
               </thead>
-              <tbody class="clients-table" id="clients-table" />
+              <tbody className="clients-table" id="clients-table" />
             </Table>
           </Col>
           <Row />
@@ -137,7 +140,7 @@ class Admin extends React.Component {
           rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         />
       </div>
     );
